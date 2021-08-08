@@ -88,7 +88,8 @@ module.exports = (_module$exports = {
     id: "ta",
     pinyin: "Tā",
     lang: {
-      es: "el"
+      es: "el",
+      fr: "il"
     }
   }
 }, _defineProperty(_module$exports, "ta", {
@@ -96,35 +97,40 @@ module.exports = (_module$exports = {
   id: "ta",
   pinyin: "Tā",
   lang: {
-    es: "ella"
+    es: "ella",
+    fr: "elle"
   }
 }), _defineProperty(_module$exports, "shi", {
   "char": "是",
   id: "shi",
   pinyin: "Shì",
   lang: {
-    es: "si"
+    es: "si",
+    fr: "oui"
   }
 }), _defineProperty(_module$exports, "ai", {
   "char": "爱",
   id: "ai",
   pinyin: "Ài",
   lang: {
-    es: "amar/querer"
+    es: "amar/querer",
+    fr: "aimer"
   }
 }), _defineProperty(_module$exports, "baba", {
   "char": "爸爸",
   id: "baba",
   pinyin: "Bàba",
   lang: {
-    es: "Papa"
+    es: "Papa",
+    fr: "papa"
   }
 }), _defineProperty(_module$exports, "mama", {
   "char": "妈妈",
   id: "mama",
   pinyin: "māmā",
   lang: {
-    es: "Mama"
+    es: "Mama",
+    fr: "mama"
   }
 }), _defineProperty(_module$exports, "pengyou", {
   "char": "朋友",
@@ -2714,7 +2720,7 @@ var Display = require('../lib/display');
 
 var TEMPLATES = [{
   id: "word-card",
-  content: "<div class=\"ui card\"><div class=\"image\"> <img src=\"{{>img-src . }}\" onerror=\"this.onerror=null; this.src=\'./img/data/default.png\'\"></div><div class=\"content\"><div class=\"ui header center-text huge\">{{char}}</div><div class=\"ui meta center-text capitalize\"><a class=\"play\" data-id=\"{{id}}\"><i class=\"volume up icon\"></i> {{pinyin}}</a></div></div><div class=\"extra content\"> {{#each lang}}<div class=\"capitalize\"><i class=\"{{@key}} flag\"></i><i class=\"volume up icon play\" data-id=\"{{id}}-{{@key}}\" data-lang=\"{{@key}}\"></i> {{this}}</div> {{/each}}</div></div>"
+  content: "<div class=\"ui card\"><div class=\"image\"> <img src=\"{{>img-src . }}\" onerror=\"this.onerror=null; this.src=\'./img/data/default.png\'\"></div><div class=\"content\"><div class=\"ui header center-text huge\">{{char}}</div><div class=\"ui meta center-text capitalize\"><a class=\"play\" data-id=\"{{id}}\"><i class=\"volume up icon\"></i> {{pinyin}}</a></div></div><div class=\"extra content\"> {{#each lang}}<div class=\"capitalize\"><a class=\"play\" data-id=\"{{../id}}-{{@key}}\"><i class=\"{{@key}} flag\"></i><i class=\"volume up icon\"></i> {{this}}</a></div> {{/each}}</div></div>"
 }, {
   id: "img-src",
   content: "./img/data/{{id}}.png"
